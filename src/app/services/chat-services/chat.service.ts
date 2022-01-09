@@ -18,6 +18,10 @@ export class ChatService {
     this.socket = io(this.uri);
   }
 
+  userConect() {
+
+  }
+
   listen(eventName: string) {
     return new Observable((subscriber) => {
       this.socket.on(eventName, (data) => {
