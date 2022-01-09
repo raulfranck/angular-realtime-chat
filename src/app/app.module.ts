@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 import {SocketIoModule, SocketIoConfig} from 'ngx-socket-io';
 import { environment } from 'src/environments/environment';
+import {ChatService} from "./services/chat-services/chat.service"
 
 const config: SocketIoConfig = {url: environment.SOCKET_URL_BASE, options: {}}
 
@@ -18,7 +19,7 @@ const config: SocketIoConfig = {url: environment.SOCKET_URL_BASE, options: {}}
     AppRoutingModule,
     SocketIoModule.forRoot(config)
   ],
-  providers: [],
+  providers: [ChatService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
