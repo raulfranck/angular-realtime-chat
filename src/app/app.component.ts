@@ -13,11 +13,5 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit() {
-    this.chatService.listen('test-event').subscribe((data) => {
-      console.log(data)
-    })
-
-    this.chatService.emit('test-event', "testeeee")
-    this.chatService.userConect()
   }
 }

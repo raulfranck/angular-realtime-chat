@@ -1,8 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-/* import { Socket } from 'ngx-socket-io';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators'; */
 
 import {io} from 'socket.io-client';
 import { environment } from 'src/environments/environment';
@@ -16,10 +13,6 @@ export class ChatService {
 
   constructor() {
     this.socket = io(this.uri);
-  }
-
-  userConect() {
-
   }
 
   listen(eventName: string) {
